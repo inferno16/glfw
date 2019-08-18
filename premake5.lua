@@ -66,3 +66,12 @@ project "GLFW"
             "_GLFW_X11",
             "_GLFW_HAS_XF86VM"
         }
+
+    filter "configurations:Debug"
+        defines { "DEBUG" }
+        optimize "Debug"
+        symbols "On"
+
+    filter "configurations:Release"
+        defines { "NDEBUG" }
+        optimize "Full"
